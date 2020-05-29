@@ -6,7 +6,7 @@ class Queue
     end    
 
     def enqueue(el)
-        @q_array.unshift(el)
+        @q_array.push(el)
     end    
 
     def dequeue
