@@ -65,9 +65,9 @@ class Play
       SELECT
         *
       FROM
-      plays
+      playwrights
       WHERE
-        title = ?
+        playwright_id = ?
     SQL
   end  
 
