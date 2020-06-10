@@ -50,7 +50,27 @@ class Play
   end
 
   def self.find_by_title(title)
-      UPDATE
-      
+    play = PlayDBConnection.instance.execute(<<-SQL, self.title)
+      SELECT
+        *
+      FROM
+      plays
+      WHERE
+        title = ?
+    SQL
   end  
+
+  def self.find_by_playwright(name)
+    play = PlayDBConnection.instance.execute(<<-SQL, self.playwright_id)
+      SELECT
+        *
+      FROM
+      plays
+      WHERE
+        title = ?
+    SQL
+  end  
+
+
+
 end

@@ -11,7 +11,7 @@ class Simon
   end
 
   def play
-    until @game_over == true #until the game is over, keep taking turns
+    until self.game_over  #until the game is over, keep taking turns
         self.take_turn
     end
     self.game_over_message  #once the game is over, show the game over message and reset the game
@@ -21,9 +21,9 @@ class Simon
   def take_turn
     self.show_sequence #show the sequence
     self.require_sequence #require the sequence from user
-    if @game_over == false #if the game isn't over show round success and increment sequence length
+    if self.game_over == false #if the game isn't over show round success and increment sequence length
       self.round_success_message
-      @sequence_length += 1
+      self.sequence_length += 1
     end  
 
   end
@@ -37,7 +37,7 @@ class Simon
   end
 
   def add_random_color
-    @seq << COLORS.sample #add random color to sequence array
+    self.seq << COLORS.sample #add random color to sequence array
   end
 
   def round_success_message

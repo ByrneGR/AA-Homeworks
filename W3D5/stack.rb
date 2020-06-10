@@ -15,6 +15,11 @@ class Stack
     
     def peek
         s_array.last
+    end
+    
+    def inspect
+        "#<Stack:#{self.object_id}>"
+
     end    
 
 
