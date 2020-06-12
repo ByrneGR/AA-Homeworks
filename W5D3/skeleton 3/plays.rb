@@ -58,6 +58,7 @@ class Play
       WHERE
         title = ?
     SQL
+    play.new
   end  
 
   def self.find_by_playwright(name)
